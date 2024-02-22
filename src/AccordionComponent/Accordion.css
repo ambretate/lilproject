@@ -1,0 +1,25 @@
+.accordion {
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .accordion-timeframe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #21aeca;
+  }
+  
+  .accordion-timeframe:hover {
+    background-color: #3ab4cc;
+  }
+  
+  .accordion-timeframe,
+  .accordion-description {
+    padding: 1rem;
+  }
+  
+  .accordion-description {
+    background-color: #39b9d2;
+  }
