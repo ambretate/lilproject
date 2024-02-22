@@ -3,14 +3,7 @@ import "./Light.css";
 
 function Light() {
   return (
-    <main>
-    <div className="timeColor">
-        <div className="hour"></div>
-        <div className="minutes"></div>
-        <div className="amPm"></div>
-        <div className="countdown"></div>
-    </div>
-</main>
+    <h1>LAST<br /> LIGHT</h1>
   )
 }
 

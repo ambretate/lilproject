@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Chasing Sunlight
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+As someone who enjoys exercising and spending time outdoors, I've often found it challenging balancing work and ensuring I actually get out the door before the last bit of sunlight is gone. This issue is compounded during the late fall and winter months.
 
-## Available Scripts
+While there are multiple resources to look up sunrise and sunset times for a location, most of these tack it on as an afterthought. It usually appears listed in a chart at the bottom of a weather report or buried deep in multiple lines looking at a full month view of times.
 
-In the project directory, you can run:
+The goal of the Chasing Sunlight site is to display first light, last light, and other marked times in a bold, graphical way that makes it easy to tell at a glance how much sunlight is left (or how long until it's back).
 
-### `npm start`
+## Wireframes
+<img src='https://github.com/ambretate/Project_1/blob/2c2cacac8c4a58d1e81d701f7e0fbec51275ae08/resources/images/IMG_4596.png'>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## APIs
+- [Sunrise and sunset times API](https://sunrise-sunset.org/api) by Sunrise-Sunset
+- [Geocoding API](https://api-ninjas.com/api/geocoding) by API Ninjas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## MVP
+The MVP will take a city input by name and using the Geocoding API convert it to latitude and longitude coordinates.
 
-### `npm test`
+The latitude and longitude coordinates will be passed to the Sunrise and sunset times API and output the times for the following:
+- Astronomical twilight begins
+- Nautical twilight begins
+- Civil twilight begins
+- Sunrise
+- Solar noon
+- Sunset 
+- Civil twilight ends
+- Nautical twilight ends
+- Astronomical twilight ends
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The most prominent area of the screen will output first light (astronomical twilight begins) or last light (astronomical twilight ends), depending on which event occurs next. This area will have a background color that reflects the current time phase (sky blue for solar noon, dark blue for night, sunrise or sunset colors based off current phase).
 
-### `npm run build`
+A less prominent portion of the screen will output submitted city and the full list of times above.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Post-MVP
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Most prominent area:
+    - Background color will be a gradient instead of solid color, and will transition with times of day
+    - An hours until first light/last light counter will appear at the bottom of this area.
+        - If counting down to last light, the last 60 minutes will be emphasized with red text.
+- Browser will have added capability to pull current location and not require city input
+- Desktop and tablet views will provide definitions of each time of day on hover.
+- A date search will allow users to view days other than today.

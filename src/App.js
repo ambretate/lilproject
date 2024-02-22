@@ -2,8 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Nav from "./Nav";
 import Light from "./Light";
+import Time from "./Time";
 import Accordion from "./AccordionComponent/Accordion";
-import { accordionData } from "./AccordionComponent/AccordionContent";
 
 function App() {
   const [times, setTimes] = useState();
@@ -50,11 +50,8 @@ function App() {
     <div className="App">
       <Nav />
       <Light />
-      <div className="accordion">
-        {accordionData.map(({ timeframe, description }) => (
-          <Accordion timeframe={timeframe} description={description} />
-        ))} 
-      </div>
+      <Time times={times} />
+      <Accordion times={times} />
     </div>
   );
 }
