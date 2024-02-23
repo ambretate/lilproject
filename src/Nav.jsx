@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"
 import "./Nav.css";
-import { useState } from "react";
-// import { Chasing_Daylight } from "src/Images/Chasing_Daylight.png";
+
 
 function Nav({setCitySearch, citySearch, fetchTimes}) {
 

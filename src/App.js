@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import Nav from "./Nav";
 import Light from "./Light";
 import Time from "./Time";
@@ -45,9 +45,6 @@ function App() {
       });
   };
 
-  // useEffect(() => {
-  //   fetchTimes();
-  // }, []);
 
   return (
     <div className="App">
