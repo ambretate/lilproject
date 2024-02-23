@@ -1,13 +1,31 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom"
 import "./Nav.css";
+import { useState } from "react";
+// import { Chasing_Daylight } from "src/Images/Chasing_Daylight.png";
 
-function Nav() {
+function Nav({setCitySearch, citySearch, fetchTimes}) {
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    fetchTimes()
+    setCitySearch("");
+  }
+
   return (
-    <nav className='navigation'>
-        <input className="city" type="text" placeholder="Enter city as city or city, state" />
-        <input type="submit" value="Submit" />
+    <nav className="navigation">
+      <img src="/Images/Chasing_Daylight.png" alt="Chasing Daylight" /> 
+      <form onSubmit={handleSubmit}>
+        <input
+          className="city"
+          value={citySearch}
+          onChange={(evt) => setCitySearch(evt.target.value)}
+          placeholder="Enter city as city or city, state"
+        />
+        <button type="submit">See the light</button>
+      </form>
     </nav>
-  )
+  );
 }
 
 export default Nav;

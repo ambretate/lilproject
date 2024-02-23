@@ -1,4 +1,9 @@
 .accordion {
+  background: rgb(238,196,196);
+background: linear-gradient(0deg, rgba(238,196,196,1) 0%, rgba(186,194,218,1) 50%, rgba(126,180,215,1) 100%);
+}
+
+.accordion-item {
     max-width: 600px;
     margin: 2rem auto;
   }
@@ -8,11 +13,9 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
-    background-color: #21aeca;
   }
   
   .accordion-timeframe:hover {
-    background-color: #3ab4cc;
   }
   
   .accordion-timeframe,
@@ -21,5 +24,4 @@
   }
   
   .accordion-description {
-    background-color: #39b9d2;
   }
