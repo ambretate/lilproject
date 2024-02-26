@@ -1,0 +1,32 @@
+.time {
+  background-color: rgb(31, 30, 30);
+  margin-top: -10%;
+  margin-bottom: 0;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  grid-template-areas:
+    "hour minutes"
+    "hour amPM";
+}
+
+.hour {
+  grid-area: hour;
+  font-size: 25rem;
+  text-align: right;
+}
+
+.minutes {
+  grid-area: minutes;
+  font-size: 10rem;
+  text-align: center;
+  padding-right: 6rem;
+  margin-top: 10%;
+}
+
+.amPm {
+  font-size: 10rem;
+  text-align: center;
+  padding-right: 6rem;
+}

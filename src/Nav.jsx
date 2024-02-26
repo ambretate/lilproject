@@ -12,7 +12,7 @@ function Nav({setCitySearch, citySearch, fetchTimes}) {
 
   return (
     <nav className="navigation">
-      <img src="/Images/Chasing_Daylight.png" alt="Chasing Daylight" /> 
+      <img src="/Images/Chasing_Daylight.png" alt="Chasing Daylight"/> 
       <form onSubmit={handleSubmit}>
         <input
           className="city"
@@ -20,7 +20,7 @@ function Nav({setCitySearch, citySearch, fetchTimes}) {
           onChange={(evt) => setCitySearch(evt.target.value)}
           placeholder="Enter city as city or city, state"
         />
-        <button type="submit">See the light</button>
+        <button type="submit">See the Light</button>
       </form>
     </nav>
   );

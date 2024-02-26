@@ -3,7 +3,7 @@ import "./Home.css"
 
 function Home() {
   return (
-    <div>Home</div>
+    <img src="Images/Chasing_Daylight_Landing_page.jpeg" className='landing'/>
   )
 }
 

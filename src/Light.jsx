@@ -3,7 +3,7 @@ import "./Light.css";
 
 function Light() {
   return (
-    <h1>LAST<br /> LIGHT</h1>
+    <h1><span>LAST</span><br /> LIGHT</h1>
   )
 }
 

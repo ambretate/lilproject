@@ -1,11 +1,17 @@
 .accordion {
-  background: rgb(238,196,196);
-background: linear-gradient(0deg, rgba(238,196,196,1) 0%, rgba(186,194,218,1) 50%, rgba(126,180,215,1) 100%);
+  background: rgb(237,172,114);
+background: linear-gradient(0deg, rgba(237,172,114,1) 0%, rgba(176,118,157,0.6685267857142857) 61%, rgba(88,72,120,1) 100%);
+padding-top: 5%;
+padding-bottom: 5%;
+font-weight: 500;
 }
 
 .accordion-item {
     max-width: 600px;
     margin: 2rem auto;
+    background-color: white;
+    opacity: .5;
+    border: 1px solid rgb(64, 63, 63);
   }
   
   .accordion-timeframe {
@@ -24,4 +30,5 @@ background: linear-gradient(0deg, rgba(238,196,196,1) 0%, rgba(186,194,218,1) 50
   }
   
   .accordion-description {
+    font-weight: 300;
   }
